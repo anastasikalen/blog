@@ -19,7 +19,6 @@ $sql = "SELECT p.title, c.body FROM posts p
         WHERE c.body LIKE '%$searchTextEscaped%'";
 
 $result = $conn->query($sql);
-
 if ($result->num_rows > 0) {
     echo "<h2>Результаты поиска:</h2>";
     while ($row = $result->fetch_assoc()) {
